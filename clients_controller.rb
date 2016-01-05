@@ -8,6 +8,7 @@ end
 def create
 	@client=Client.new(user_param)
 	if @client.save
+		puts 'Hi this is TGK'
 		redirect_to client_path(:id=>@client.id)
 	else
 		render 'new'
